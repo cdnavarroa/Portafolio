@@ -1,0 +1,15 @@
+<section id="educacion">
+  <div class="section-label">05 — Educación</div>
+  <h2 class="section-title reveal">
+    Formación<br /><span class="accent">académica.</span>
+  </h2>
+
+  <div class="edu-grid">
+    <div class="edu-card reveal" *ngFor="let edu of education">
+      <div class="edu-year">{{ edu.year }}</div>
+      <div class="edu-status">{{ edu.status }}</div>
+      <div class="edu-degree">{{ edu.degree }}</div>
+      <div class="edu-institution">{{ edu.institution }}</div>
+    </div>
+  </div>
+</section>

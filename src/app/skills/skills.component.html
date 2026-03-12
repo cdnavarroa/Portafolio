@@ -1,0 +1,28 @@
+<section class="skills-section" id="skills">
+  <div class="section-label">02 — Habilidades</div>
+  <h2 class="section-title reveal">
+    Stack<br /><span class="accent">técnico.</span>
+  </h2>
+
+  <div class="skills-grid">
+    @for (skill of skills; track skill.name) {
+      <div class="skill-card reveal">
+        <img
+          class="skill-icon"
+          [src]="skill.icon"
+          [alt]="skill.name + ' icon'"
+          width="40"
+          height="40"
+        />
+        <div class="skill-name">{{ skill.name }}</div>
+        <div class="skill-level">{{ skill.level }}</div>
+        <div class="skill-bar">
+          <div
+            class="skill-bar-fill"
+            [style.--w]="skill.percent + '%'"
+          ></div>
+        </div>
+      </div>
+    }
+  </div>
+</section>

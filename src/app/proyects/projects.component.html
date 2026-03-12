@@ -1,0 +1,48 @@
+<section class="projects-section">
+  <div class="section-label">03 — Proyectos</div>
+  <h2 class="section-title reveal">
+    Proyectos<br /><span class="accent">Desarrollados.</span>
+  </h2>
+
+  <div class="projects-grid">
+    @for (project of projects; track project.name) {
+      <div class="project-card reveal">
+
+        <div class="project-card__thumbnail">
+          @if (project.image) {
+            <img [src]="project.image" [alt]="project.name" class="project-card__image" />
+          } @else {
+            <div class="project-card__placeholder">
+              <span class="project-card__placeholder-icon">{{ project.icon }}</span>
+              <span class="project-card__placeholder-label">{{ project.name }}</span>
+            </div>
+          }
+        </div>
+
+        <div class="project-card__body">
+          <div class="project-card__header">
+            <span class="project-card__type">{{ project.type }}</span>
+          </div>
+
+          <div>
+            <p class="project-card__name">{{ project.name }}</p>
+            @if (project.url) {
+              <a [href]="project.url" target="_blank" class="project-card__url">
+                {{ project.url }}
+              </a>
+            }
+          </div>
+
+          <p class="project-card__description">{{ project.description }}</p>
+
+          <div class="project-card__techs">
+            @for (tech of project.techs; track tech.label) {
+              <span class="badge" [ngClass]="tech.cssClass">{{ tech.label }}</span>
+            }
+          </div>
+        </div>
+
+      </div>
+    }
+  </div>
+</section>
