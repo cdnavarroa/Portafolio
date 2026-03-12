@@ -17,10 +17,37 @@
         <div class="skill-name">{{ skill.name }}</div>
         <div class="skill-level">{{ skill.level }}</div>
         <div class="skill-bar">
-          <div
-            class="skill-bar-fill"
-            [style.--w]="skill.percent + '%'"
-          ></div>
+          <div class="skill-bar-fill" [style.--w]="skill.percent + '%'"></div>
+        </div>
+      </div>
+    }
+  </div>
+
+  <div class="competencies-label reveal">Herramientas & Librerías</div>
+
+  <div class="competencies-grid">
+    @for (tool of tooling; track tool.category) {
+      <div class="competency-card reveal">
+        <div class="competency-category">{{ tool.category }}</div>
+        <div class="competency-items">
+          @for (item of tool.items; track item) {
+            <span class="competency-item">{{ item }}</span>
+          }
+        </div>
+      </div>
+    }
+  </div>
+
+  <div class="competencies-label reveal">Competencias técnicas</div>
+
+  <div class="competencies-grid">
+    @for (comp of competencies; track comp.category) {
+      <div class="competency-card reveal">
+        <div class="competency-category">{{ comp.category }}</div>
+        <div class="competency-items">
+          @for (item of comp.items; track item) {
+            <span class="competency-item">{{ item }}</span>
+          }
         </div>
       </div>
     }

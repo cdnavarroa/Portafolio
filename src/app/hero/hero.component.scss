@@ -188,6 +188,10 @@
     padding: 80px 24px;
   }
 
+  .hero-name {
+    font-size: clamp(32px, 11vw, 72px);
+  }
+
   .hero-stats,
   .hero-scroll {
     display: none;

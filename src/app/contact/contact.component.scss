@@ -77,4 +77,8 @@
   .contact-section {
     padding: 80px 24px;
   }
+
+  .contact-big {
+    font-size: clamp(28px, 7.5vw, 48px);
+  }
 }

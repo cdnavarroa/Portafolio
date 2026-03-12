@@ -1,4 +1,4 @@
-<section class="projects-section">
+<section class="projects-section" id="proyectos">
   <div class="section-label">03 — Proyectos</div>
   <h2 class="section-title reveal">
     Proyectos<br /><span class="accent">Desarrollados.</span>
@@ -6,15 +6,20 @@
 
   <div class="projects-grid">
     @for (project of projects; track project.name) {
-      <div class="project-card reveal">
+      <div class="project-card reveal" (click)="openModal(project)">
 
         <div class="project-card__thumbnail">
           @if (project.image) {
-            <img [src]="project.image" [alt]="project.name" class="project-card__image" />
+            <img [src]="project.image" [alt]="project.name" class="project-card__image" width="100vh" />
           } @else {
             <div class="project-card__placeholder">
               <span class="project-card__placeholder-icon">{{ project.icon }}</span>
               <span class="project-card__placeholder-label">{{ project.name }}</span>
+            </div>
+          }
+          @if (projectHasImages(project)) {
+            <div class="project-card__badge-images">
+              {{ project.images!.length }} fotos
             </div>
           }
         </div>
@@ -27,9 +32,12 @@
           <div>
             <p class="project-card__name">{{ project.name }}</p>
             @if (project.url) {
-              <a [href]="project.url" target="_blank" class="project-card__url">
-                {{ project.url }}
-              </a>
+              <a
+                [href]="project.url"
+                target="_blank"
+                class="project-card__url"
+                (click)="$event.stopPropagation()"
+              >{{ project.url }}</a>
             }
           </div>
 
@@ -46,3 +54,68 @@
     }
   </div>
 </section>
+
+@if (selectedProject) {
+  <div class="modal-backdrop" (click)="onBackdropClick($event)">
+    <div class="modal">
+
+      <div class="modal__header">
+        <div class="modal__meta">
+          <span class="modal__type">{{ selectedProject.type }}</span>
+          <h3 class="modal__name">{{ selectedProject.name }}</h3>
+        </div>
+        <button class="modal__close" (click)="closeModal()">✕</button>
+      </div>
+
+      @if (hasImages) {
+        <div class="carousel">
+          <div class="carousel__track">
+            <img
+              [src]="selectedProject.images![currentIndex]"
+              [alt]="selectedProject.name + ' - imagen ' + (currentIndex + 1)"
+              class="carousel__image"
+            />
+          </div>
+
+          @if (selectedProject.images!.length > 1) {
+            <button class="carousel__btn carousel__btn--prev" (click)="prev()">‹</button>
+            <button class="carousel__btn carousel__btn--next" (click)="next()">›</button>
+
+            <div class="carousel__dots">
+              @for (img of selectedProject.images!; track $index) {
+                <button
+                  class="carousel__dot"
+                  [class.active]="$index === currentIndex"
+                  (click)="goTo($index)"
+                ></button>
+              }
+            </div>
+
+            <div class="carousel__counter">
+              {{ currentIndex + 1 }} / {{ selectedProject.images!.length }}
+            </div>
+          }
+        </div>
+      } @else {
+        <div class="modal__no-images">
+          <span class="modal__no-images-icon">{{ selectedProject.icon }}</span>
+          <p>Sin imágenes disponibles</p>
+        </div>
+      }
+
+      <div class="modal__footer">
+        <div class="modal__techs">
+          @for (tech of selectedProject.techs; track tech.label) {
+            <span class="badge" [ngClass]="tech.cssClass">{{ tech.label }}</span>
+          }
+        </div>
+        @if (selectedProject.url) {
+          <a [href]="selectedProject.url" target="_blank" class="modal__link">
+            Visitar sitio →
+          </a>
+        }
+      </div>
+
+    </div>
+  </div>
+}

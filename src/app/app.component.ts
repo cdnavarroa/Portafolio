@@ -8,7 +8,7 @@ import { EducationComponent } from './education/education.component';
 import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
 import { PortafolioService } from './shared/portafolio.service';
-import { ProjectsComponent } from './proyects/proyects.component';
+import { ProjectsComponent } from './proyects/projects.component';
 
 @Component({
   selector: 'app-portafolio',

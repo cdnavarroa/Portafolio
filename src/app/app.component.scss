@@ -5,7 +5,7 @@
   border-radius: 50%;
   position: fixed;
   pointer-events: none;
-  z-index: 9999;
+  z-index: 10002;
   transition: transform 0.1s ease;
   mix-blend-mode: difference;
 }
@@ -17,7 +17,7 @@
   border-radius: 50%;
   position: fixed;
   pointer-events: none;
-  z-index: 9998;
+  z-index: 10001;
   transition: all 0.15s ease;
   mix-blend-mode: difference;
 }
