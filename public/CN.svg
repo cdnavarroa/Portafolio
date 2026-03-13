@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="320" height="320" viewBox="0 0 320 320">
 
-  <!-- Fondo negro redondeado más ajustado -->
+  <!-- Fondo negro redondeado -->
   <rect width="320" height="320" rx="110" ry="110" fill="#000000"/>
 
   <style>
@@ -10,16 +10,19 @@
       font-size: 150px;
       fill: #ffffff;
       font-weight: 700;
+      dominant-baseline: middle;
+      text-anchor: middle;
     }
   </style>
 
-  <g transform="translate(160,170)">
+  <!-- Grupo centrado -->
+  <g transform="translate(160,160)">
     
     <!-- Texto -->
-    <text class="cn" x="-35" y="40" text-anchor="middle">CN</text>
+    <text class="cn" x="-20" y="0">CN</text>
 
-    <!-- Punto circular -->
-    <circle cx="80" cy="28" r="11" fill="#c8f55a"/>
+    <!-- Punto circular alineado con la parte inferior -->
+    <circle cx="90" cy="28" r="11" fill="#c8f55a"/>
 
   </g>
 
