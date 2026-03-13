@@ -6,9 +6,9 @@
 
   <div class="projects-grid">
     @for (project of projects; track project.name) {
-      <div class="project-card reveal" (click)="openModal(project)">
+      <div class="project-card reveal">
 
-        <div class="project-card__thumbnail">
+        <div class="project-card__thumbnail" (click)="openModal(project)">
           @if (project.image) {
             <img [src]="project.image" [alt]="project.name" class="project-card__image" width="100vh" />
           } @else {
