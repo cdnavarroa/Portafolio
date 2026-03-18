@@ -105,7 +105,7 @@ projects: Project[] = [
     icon: '📈',
     type: 'Dashboard',
     name: 'Programador de Tareas',
-    url: 'https://github.com/cdnavarroa/Programador-Tareas.git',
+    url: 'https://github.com/cdnavarroa/Programador-Tareas',
     description: 'Dashboard de gestión de tareas con visualización de datos.',
     techs: [
       { label: 'React', cssClass: 'badge--react' },
@@ -119,6 +119,24 @@ projects: Project[] = [
       'assets/images/prog_tareas/dashboard.png',
     ],
   },
+  {
+    icon: '📄',
+    type: 'Tool',
+    name: 'Procesador PDF',
+    url: 'https://github.com/cdnavarroa/pdf_processor',
+    description: 'Herramienta para procesar y manipular archivos PDF. Extrae texto y renombra archivos según su contenido basandose en reglas definidas para presentacion de requerimientos de secretaria de hacienda.',
+    techs: [
+      { label: 'Python', cssClass: 'badge--python' },
+      { label: 'Tesseract', cssClass: 'badge--tesseract' },
+      { label: 'Ollama', cssClass: 'badge--python'},
+      { label: 'Git', cssClass: 'badge--git' },
+    ],
+    image: 'assets/images/processor_pdf/processor_pdf-2.png',
+    images: [
+      'assets/images/processor_pdf/processor_pdf-2.png',
+      'assets/images/processor_pdf/processor_pdf.png',
+    ],
+  }
 ];
 
   get hasImages(): boolean {
