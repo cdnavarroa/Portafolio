@@ -34,7 +34,7 @@ import { ProjectsComponent } from './proyects/projects.component';
     <app-skills />
     <app-projects />
     <app-experience />
-    <app-education />
+    <!-- <app-education /> -->
     <app-contact />
     <app-footer />
   `,
