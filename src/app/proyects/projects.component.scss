@@ -129,7 +129,7 @@
 
 .project-card__thumbnail {
   width: 100%;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 16 / 10;
   overflow: hidden;
   position: relative;
   background: var(--surface2);
@@ -138,12 +138,12 @@
 .project-card__image {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   display: block;
   transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 
   .project-card:hover & {
-    transform: scale(1.04);
+    transform: scale(1.02);
   }
 }
 
@@ -205,6 +205,7 @@
   &--tesseract{ border-color: rgba(240, 237, 232, 0.2); color: var(--text); }
   &--ollama   { border-color: rgba(200, 245, 90, 0.3);  color: var(--accent); }
   &--git      { border-color: rgba(90, 245, 200, 0.3); color: var(--accent2); }  
+  &--vercel   { border-color: rgba(240, 237, 232, 0.2); color: var(--text); }  
 
 }
 
@@ -359,14 +360,14 @@
 
   &__track {
     width: 100%;
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 16 / 10;
     overflow: hidden;
   }
 
   &__image {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     display: block;
     transition: opacity 0.3s ease;
   }

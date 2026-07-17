@@ -136,6 +136,23 @@ projects: Project[] = [
       'assets/images/processor_pdf/processor_pdf-2.png',
       'assets/images/processor_pdf/processor_pdf.png',
     ],
+  },
+  {
+    icon: '📊',
+    type: 'Dashboard',
+    name: 'KPI Dashboard',
+    url: 'https://kpi-dashboard-five-nu.vercel.app/',
+    description: 'Dashboard para consulta de información de personas con visualización de KPIs y métricas clave.',
+    techs: [
+      { label: 'Next.js', cssClass: 'badge--next' },
+      { label: 'React', cssClass: 'badge--react' },
+      { label: 'Tailwind', cssClass: 'badge--tw' },
+      { label: 'Vercel', cssClass: 'badge--vercel' },
+    ],
+    image: 'assets/images/kpi-dashboard/dashboard.png',
+    images: [
+      'assets/images/kpi-dashboard/dashboard.png',
+    ],
   }
 ];
 
