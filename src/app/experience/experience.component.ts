@@ -18,6 +18,23 @@ interface ExperienceItem {
 export class ExperienceComponent {
   experiences: ExperienceItem[] = [
     {
+      period: 'Julio 2026 — Actualidad',
+      title: 'Desarrollador Odoo',
+      company: 'Mocion S.A.S',
+      items: [
+        'Desarrollo y personalización de módulos Odoo según necesidades del negocio',
+        'Implementación de integraciones y automatizaciones sobre el ERP',
+      ],
+    },
+    {
+      period: 'Enero 2026 — Julio 2026',
+      title: 'Desarrollador Independiente',
+      company: 'Freelance',
+      items: [
+        'Desarrollo de proyectos de software de forma independiente para distintos clientes',
+      ],
+    },
+    {
       period: 'Julio 2021 — Diciembre 2025',
       title: 'Coordinador de Sistemas',
       company: 'Sempreg Technology SAS',
