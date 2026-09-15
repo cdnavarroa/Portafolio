@@ -67,7 +67,7 @@ projects: Project[] = [
   },
   {
     icon: '🏠',
-    type: 'Rediseño web',
+    type: 'Landing page',
     name: 'Áreas y Espacios Inmobiliarios',
     url: 'https://areasyespacios.com',
     description: 'Rediseño completo del sitio web de una inmobiliaria en Bogotá. Landing page responsive con secciones de servicios, avalúo en línea, consignación de inmuebles y formulario de contacto, con animaciones al hacer scroll, menú móvil y botón de WhatsApp.',
