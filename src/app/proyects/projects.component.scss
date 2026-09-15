@@ -204,8 +204,12 @@
   &--typescript{ border-color: rgba(90, 245, 200, 0.3); color: var(--accent2); }
   &--tesseract{ border-color: rgba(240, 237, 232, 0.2); color: var(--text); }
   &--ollama   { border-color: rgba(200, 245, 90, 0.3);  color: var(--accent); }
-  &--git      { border-color: rgba(90, 245, 200, 0.3); color: var(--accent2); }  
-  &--vercel   { border-color: rgba(240, 237, 232, 0.2); color: var(--text); }  
+  &--git      { border-color: rgba(90, 245, 200, 0.3); color: var(--accent2); }
+  &--vercel   { border-color: rgba(240, 237, 232, 0.2); color: var(--text); }
+  &--html     { border-color: rgba(200, 245, 90, 0.3);  color: var(--accent); }
+  &--css      { border-color: rgba(90, 245, 200, 0.3); color: var(--accent2); }
+  &--js       { border-color: rgba(240, 237, 232, 0.2); color: var(--text); }
+  &--php      { border-color: rgba(200, 245, 90, 0.3);  color: var(--accent); }
 
 }
 

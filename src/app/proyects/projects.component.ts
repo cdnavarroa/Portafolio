@@ -66,6 +66,25 @@ projects: Project[] = [
     ],
   },
   {
+    icon: '🏠',
+    type: 'Rediseño web',
+    name: 'Áreas y Espacios Inmobiliarios',
+    url: 'https://areasyespacios.com',
+    description: 'Rediseño completo del sitio web de una inmobiliaria en Bogotá. Landing page responsive con secciones de servicios, avalúo en línea, consignación de inmuebles y formulario de contacto, con animaciones al hacer scroll, menú móvil y botón de WhatsApp.',
+    techs: [
+      { label: 'HTML', cssClass: 'badge--html' },
+      { label: 'CSS', cssClass: 'badge--css' },
+      { label: 'JavaScript', cssClass: 'badge--js' },
+      { label: 'PHP', cssClass: 'badge--php' },
+    ],
+    image: 'assets/images/areasyespacios/areasyespacios-inicio.png',
+    images: [
+      'assets/images/areasyespacios/areasyespacios-inicio.png',
+      'assets/images/areasyespacios/areasyespacios-nosotros.png',
+      'assets/images/areasyespacios/areasyespacios-consigna.png',
+    ],
+  },
+  {
     icon: '🌐',
     type: 'Landing page',
     name: 'Sempreg',
