@@ -10,7 +10,15 @@
 
         <div class="project-card__thumbnail" (click)="openModal(project)">
           @if (project.image) {
-            <img [src]="project.image" [alt]="project.name" class="project-card__image" width="100vh" />
+            <img
+              [src]="thumb(project.image)"
+              [alt]="project.name"
+              class="project-card__image"
+              width="800"
+              height="500"
+              loading="lazy"
+              decoding="async"
+            />
           } @else {
             <div class="project-card__placeholder">
               <span class="project-card__placeholder-icon">{{ project.icon }}</span>
@@ -76,6 +84,7 @@
                 [src]="src"
                 [alt]="selectedProject.name + ' - imagen ' + (currentIndex + 1)"
                 class="carousel__image"
+                decoding="async"
                 [class.from-prev]="direction === 'prev'"
               />
             }

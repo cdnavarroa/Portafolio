@@ -12,15 +12,24 @@
 .hero-grid {
   position: absolute;
   inset: 0;
-  background-image:
-    linear-gradient(var(--border) 1px, transparent 1px),
-    linear-gradient(90deg, var(--border) 1px, transparent 1px);
-  background-size: 80px 80px;
+  overflow: hidden;
   opacity: 0.4;
   mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black, transparent);
   transform: translate(calc(var(--px, 0) * -24px), calc(var(--py, 0) * -24px));
   transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
-  animation: gridDrift 24s linear infinite;
+
+  // La cuadrícula se desplaza con translate (compositor) en lugar de
+  // animar background-position, que repinta todo el hero en cada frame.
+  &::before {
+    content: '';
+    position: absolute;
+    inset: -80px 0 0 -80px;
+    background-image:
+      linear-gradient(var(--border) 1px, transparent 1px),
+      linear-gradient(90deg, var(--border) 1px, transparent 1px);
+    background-size: 80px 80px;
+    animation: gridDrift 24s linear infinite;
+  }
 }
 
 .hero-tag {

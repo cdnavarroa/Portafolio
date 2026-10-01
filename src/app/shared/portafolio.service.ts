@@ -21,18 +21,24 @@ export class PortafolioService {
   }
 
   initCursor(cursor: HTMLElement, ring: HTMLElement): void {
-    this.ngZone.runOutsideAngular(() => {
-      document.addEventListener('mousemove', (e) => {
-        this.mouseX = e.clientX;
-        this.mouseY = e.clientY;
-        cursor.style.left = `${this.mouseX - 5}px`;
-        cursor.style.top = `${this.mouseY - 5}px`;
-      });
+    // En pantallas táctiles no hay cursor que seguir
+    if (!this.canHover) return;
 
-      if (!this.animating) {
-        this.animating = true;
-        this.animateRing(ring);
-      }
+    this.ngZone.runOutsideAngular(() => {
+      document.addEventListener(
+        'mousemove',
+        (e) => {
+          this.mouseX = e.clientX;
+          this.mouseY = e.clientY;
+          // translate no dispara layout como left/top
+          cursor.style.translate = `${this.mouseX - 5}px ${this.mouseY - 5}px`;
+          if (!this.animating) {
+            this.animating = true;
+            requestAnimationFrame(() => this.animateRing(ring));
+          }
+        },
+        { passive: true }
+      );
 
       // Delegado: también cubre elementos creados después (modal, carrusel)
       document.addEventListener('mouseover', (e) => {
@@ -302,11 +308,18 @@ export class PortafolioService {
     );
   }
 
+  /** Sigue al cursor con retraso; se detiene al alcanzarlo y se reanuda con el siguiente mousemove. */
   private animateRing(ring: HTMLElement): void {
-    this.ringX += (this.mouseX - this.ringX - 18) * 0.12;
-    this.ringY += (this.mouseY - this.ringY - 18) * 0.12;
-    ring.style.left = `${this.ringX}px`;
-    ring.style.top = `${this.ringY}px`;
+    const dx = this.mouseX - this.ringX - 18;
+    const dy = this.mouseY - this.ringY - 18;
+    this.ringX += dx * 0.12;
+    this.ringY += dy * 0.12;
+    ring.style.translate = `${this.ringX}px ${this.ringY}px`;
+
+    if (Math.abs(dx) < 0.1 && Math.abs(dy) < 0.1) {
+      this.animating = false;
+      return;
+    }
     requestAnimationFrame(() => this.animateRing(ring));
   }
 }

@@ -4,6 +4,8 @@
   background: var(--accent);
   border-radius: 50%;
   position: fixed;
+  top: 0;
+  left: 0;
   pointer-events: none;
   z-index: 10002;
   transition: transform 0.1s ease;
@@ -16,9 +18,11 @@
   border: 1px solid var(--accent);
   border-radius: 50%;
   position: fixed;
+  top: 0;
+  left: 0;
   pointer-events: none;
   z-index: 10001;
-  transition: all 0.15s ease;
+  transition: translate 0.15s ease, transform 0.15s ease, opacity 0.15s ease, border-width 0.15s ease;
   mix-blend-mode: difference;
 }
 
@@ -37,6 +41,14 @@
 
   &.is-pressed {
     border-width: 2px;
+  }
+}
+
+// Sin cursor personalizado en pantallas táctiles
+@media not ((hover: hover) and (pointer: fine)) {
+  .cursor,
+  .cursor-ring {
+    display: none;
   }
 }
 

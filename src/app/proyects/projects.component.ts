@@ -49,21 +49,21 @@ projects: Project[] = [
       { label: 'Excel / VBA', cssClass: 'badge--excel' },
       { label: 'jsPDF', cssClass: 'badge--typescript' },
     ],
-    image: 'assets/images/finreport/finreport-login.png',
+    image: 'assets/images/finreport/finreport-login.webp',
     images: [
-      'assets/images/finreport/finreport-login.png',
-      'assets/images/finreport/finreport-dashboard.png',
-      'assets/images/finreport/finreport-importar-datos.png',
-      'assets/images/finreport/finreport-importar-tipo-dato.png',
-      'assets/images/finreport/finreport-movimientos.png',
-      'assets/images/finreport/finreport-consulta-movimientos.png',
-      'assets/images/finreport/finreport-resumen-financiero.png',
-      'assets/images/finreport/finreport-estados-financieros.png',
-      'assets/images/finreport/finreport-informes.png',
-      'assets/images/finreport/finreport-generar-pdf.png',
-      'assets/images/finreport/finreport-editor-notas.png',
-      'assets/images/finreport/finreport-calendario-tributario.png',
-      'assets/images/finreport/finreport-vencimientos.png',
+      'assets/images/finreport/finreport-login.webp',
+      'assets/images/finreport/finreport-dashboard.webp',
+      'assets/images/finreport/finreport-importar-datos.webp',
+      'assets/images/finreport/finreport-importar-tipo-dato.webp',
+      'assets/images/finreport/finreport-movimientos.webp',
+      'assets/images/finreport/finreport-consulta-movimientos.webp',
+      'assets/images/finreport/finreport-resumen-financiero.webp',
+      'assets/images/finreport/finreport-estados-financieros.webp',
+      'assets/images/finreport/finreport-informes.webp',
+      'assets/images/finreport/finreport-generar-pdf.webp',
+      'assets/images/finreport/finreport-editor-notas.webp',
+      'assets/images/finreport/finreport-calendario-tributario.webp',
+      'assets/images/finreport/finreport-vencimientos.webp',
     ],
   },
   {
@@ -79,13 +79,13 @@ projects: Project[] = [
       { label: 'PHP', cssClass: 'badge--php' },
       { label: 'Leaflet', cssClass: 'badge--typescript' },
     ],
-    image: 'assets/images/sansilvestre/sansilvestre-inicio.png',
+    image: 'assets/images/sansilvestre/sansilvestre-inicio.webp',
     images: [
-      'assets/images/sansilvestre/sansilvestre-inicio.png',
-      'assets/images/sansilvestre/sansilvestre-inmuebles.png',
-      'assets/images/sansilvestre/sansilvestre-servicios.png',
-      'assets/images/sansilvestre/sansilvestre-detalle.png',
-      'assets/images/sansilvestre/sansilvestre-similares.png',
+      'assets/images/sansilvestre/sansilvestre-inicio.webp',
+      'assets/images/sansilvestre/sansilvestre-inmuebles.webp',
+      'assets/images/sansilvestre/sansilvestre-servicios.webp',
+      'assets/images/sansilvestre/sansilvestre-detalle.webp',
+      'assets/images/sansilvestre/sansilvestre-similares.webp',
     ],
   },
   {
@@ -100,11 +100,11 @@ projects: Project[] = [
       { label: 'JavaScript', cssClass: 'badge--js' },
       { label: 'PHP', cssClass: 'badge--php' },
     ],
-    image: 'assets/images/areasyespacios/areasyespacios-inicio.png',
+    image: 'assets/images/areasyespacios/areasyespacios-inicio.webp',
     images: [
-      'assets/images/areasyespacios/areasyespacios-inicio.png',
-      'assets/images/areasyespacios/areasyespacios-nosotros.png',
-      'assets/images/areasyespacios/areasyespacios-consigna.png',
+      'assets/images/areasyespacios/areasyespacios-inicio.webp',
+      'assets/images/areasyespacios/areasyespacios-nosotros.webp',
+      'assets/images/areasyespacios/areasyespacios-consigna.webp',
     ],
   },
   {
@@ -118,11 +118,11 @@ projects: Project[] = [
       { label: 'React', cssClass: 'badge--react' },
       { label: 'Tailwind', cssClass: 'badge--tw' },
     ],
-    image: 'assets/images/sempreg/sempreg_light.png',
+    image: 'assets/images/sempreg/sempreg_light.webp',
     images: [
-      'assets/images/sempreg/sempreg_light.png',
-      'assets/images/sempreg/sempreg_black.png',
-      'assets/images/sempreg/sempreg_herramientas.png',
+      'assets/images/sempreg/sempreg_light.webp',
+      'assets/images/sempreg/sempreg_black.webp',
+      'assets/images/sempreg/sempreg_herramientas.webp',
     ],
   },
   {
@@ -141,12 +141,12 @@ projects: Project[] = [
       { label: 'Excel / VBA', cssClass: 'badge--excel' },
       { label: 'jsPDF', cssClass: 'badge--typescript' },
     ],
-    image: 'assets/images/suite/suite-1.png',
+    image: 'assets/images/suite/suite-1.webp',
     images: [
-      'assets/images/suite/suite-1.png',
-      'assets/images/suite/suite-2.png',
-      'assets/images/suite/suite_resumen.png',
-      'assets/images/suite/suite_informes.png',
+      'assets/images/suite/suite-1.webp',
+      'assets/images/suite/suite-2.webp',
+      'assets/images/suite/suite_resumen.webp',
+      'assets/images/suite/suite_informes.webp',
     ],
   },
   {
@@ -171,9 +171,9 @@ projects: Project[] = [
       { label: 'Angular', cssClass: 'badge--angular' },
       { label: 'TypeScript', cssClass: 'badge--typescript' },
     ],
-    image: 'assets/images/portafolio/portafolio.png',
+    image: 'assets/images/portafolio/portafolio.webp',
     images: [
-      'assets/images/portafolio/portafolio.png',
+      'assets/images/portafolio/portafolio.webp',
     ],
   },
   {
@@ -189,9 +189,9 @@ projects: Project[] = [
       { label: 'MySQL', cssClass: 'badge--mysql' },
       { label: 'TypeScript', cssClass: 'badge--typescript' },
     ],
-    image: 'assets/images/prog_tareas/dashboard.png',
+    image: 'assets/images/prog_tareas/dashboard.webp',
     images: [
-      'assets/images/prog_tareas/dashboard.png',
+      'assets/images/prog_tareas/dashboard.webp',
     ],
   },
   {
@@ -206,10 +206,10 @@ projects: Project[] = [
       { label: 'Ollama', cssClass: 'badge--python'},
       { label: 'Git', cssClass: 'badge--git' },
     ],
-    image: 'assets/images/processor_pdf/processor_pdf-2.png',
+    image: 'assets/images/processor_pdf/processor_pdf-2.webp',
     images: [
-      'assets/images/processor_pdf/processor_pdf-2.png',
-      'assets/images/processor_pdf/processor_pdf.png',
+      'assets/images/processor_pdf/processor_pdf-2.webp',
+      'assets/images/processor_pdf/processor_pdf.webp',
     ],
   },
   {
@@ -224,12 +224,17 @@ projects: Project[] = [
       { label: 'Tailwind', cssClass: 'badge--tw' },
       { label: 'Vercel', cssClass: 'badge--vercel' },
     ],
-    image: 'assets/images/kpi-dashboard/dashboard.png',
+    image: 'assets/images/kpi-dashboard/dashboard.webp',
     images: [
-      'assets/images/kpi-dashboard/dashboard.png',
+      'assets/images/kpi-dashboard/dashboard.webp',
     ],
   }
 ];
+
+  /** Miniatura liviana (800px) usada en las tarjetas; la imagen completa solo se carga en el modal. */
+  thumb(src: string): string {
+    return src.replace(/\.webp$/, '-thumb.webp');
+  }
 
   get hasImages(): boolean {
     return !!this.selectedProject?.images?.length;
