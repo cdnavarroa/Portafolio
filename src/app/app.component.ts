@@ -27,6 +27,7 @@ import { ProjectsComponent } from './proyects/projects.component';
   template: `
     <div class="cursor" #cursor></div>
     <div class="cursor-ring" #cursorRing></div>
+    <div class="scroll-progress"></div>
 
     <app-nav />
     <app-hero />
@@ -51,6 +52,9 @@ export class PortafolioComponent implements AfterViewInit {
       this.cursorRef.nativeElement,
       this.cursorRingRef.nativeElement
     );
-    setTimeout(() => this.portafolioService.initReveal(), 100);
+    setTimeout(() => {
+      this.portafolioService.initReveal();
+      this.portafolioService.initEffects();
+    }, 100);
   }
 }

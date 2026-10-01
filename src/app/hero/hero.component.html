@@ -1,13 +1,12 @@
 <section class="hero" id="inicio">
   <div class="hero-grid"></div>
+  <div class="hero-glow"></div>
 
   <div class="hero-tag">Desarrollador Web Full Stack</div>
 
-  <h1 class="hero-name">
-    <div>CRISTIAN</div>
-    <div>
-      <span class="outline">NA</span><span class="accent">VAR</span><span class="outline">RO</span>
-    </div>
+  <h1 class="hero-name" aria-label="Cristian Navarro">
+    <div aria-hidden="true">@for (ch of firstName; track ch.i) {<span class="char" [style.--i]="ch.i">{{ ch.c }}</span>}</div>
+    <div aria-hidden="true">@for (part of lastName; track $index) {<span [class]="part.cls">@for (ch of part.chars; track ch.i) {<span class="char" [style.--i]="ch.i">{{ ch.c }}</span>}</span>}</div>
   </h1>
 
   <p class="hero-desc">
@@ -23,11 +22,11 @@
 
   <div class="hero-stats">
     <div>
-      <div class="stat-num">4+</div>
+      <div class="stat-num" data-count="4" data-suffix="+">4+</div>
       <div class="stat-label">años de exp.</div>
     </div>
     <div>
-      <div class="stat-num">7</div>
+      <div class="stat-num" data-count="7">7</div>
       <div class="stat-label">tecnologías</div>
     </div>
     <div>

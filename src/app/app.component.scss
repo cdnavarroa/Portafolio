@@ -21,3 +21,35 @@
   transition: all 0.15s ease;
   mix-blend-mode: difference;
 }
+
+.cursor-ring {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &::after {
+    content: attr(data-label);
+    font-size: 4.5px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+
+  &.is-pressed {
+    border-width: 2px;
+  }
+}
+
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent), var(--accent2));
+  transform: scaleX(0);
+  transform-origin: left;
+  z-index: 101;
+  pointer-events: none;
+  box-shadow: 0 0 12px rgba(200, 245, 90, 0.6);
+}

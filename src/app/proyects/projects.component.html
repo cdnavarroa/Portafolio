@@ -70,11 +70,15 @@
       @if (hasImages) {
         <div class="carousel">
           <div class="carousel__track">
-            <img
-              [src]="selectedProject.images![currentIndex]"
-              [alt]="selectedProject.name + ' - imagen ' + (currentIndex + 1)"
-              class="carousel__image"
-            />
+            <!-- Se recrea la imagen en cada cambio para disparar la animación de entrada -->
+            @for (src of [selectedProject.images![currentIndex]]; track src) {
+              <img
+                [src]="src"
+                [alt]="selectedProject.name + ' - imagen ' + (currentIndex + 1)"
+                class="carousel__image"
+                [class.from-prev]="direction === 'prev'"
+              />
+            }
           </div>
 
           @if (selectedProject.images!.length > 1) {

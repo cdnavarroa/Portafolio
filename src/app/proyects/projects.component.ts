@@ -28,6 +28,7 @@ interface Project {
 export class ProjectsComponent implements OnDestroy {
   selectedProject: Project | null = null;
   currentIndex = 0;
+  direction: 'next' | 'prev' = 'next';
 
   constructor(@Inject(PLATFORM_ID) private platformId: object) {}
 
@@ -63,6 +64,28 @@ projects: Project[] = [
       'assets/images/finreport/finreport-editor-notas.png',
       'assets/images/finreport/finreport-calendario-tributario.png',
       'assets/images/finreport/finreport-vencimientos.png',
+    ],
+  },
+  {
+    icon: '🏡',
+    type: 'Rediseño web',
+    name: 'Sansilvestre Group Inmobiliaria',
+    url: 'https://sansilvestregroupinm.com',
+    description: 'Rediseño completo del sitio web de una inmobiliaria del Valle del Cauca. Buscador de inmuebles en tiempo real conectado al inventario de Simi (filtros por gestión, tipo, ciudad y barrio), fichas de detalle con galería, video y mapa, inmuebles similares, simuladores, pagos PSE y contacto por WhatsApp.',
+    techs: [
+      { label: 'HTML', cssClass: 'badge--html' },
+      { label: 'CSS', cssClass: 'badge--css' },
+      { label: 'JavaScript', cssClass: 'badge--js' },
+      { label: 'PHP', cssClass: 'badge--php' },
+      { label: 'Leaflet', cssClass: 'badge--typescript' },
+    ],
+    image: 'assets/images/sansilvestre/sansilvestre-inicio.png',
+    images: [
+      'assets/images/sansilvestre/sansilvestre-inicio.png',
+      'assets/images/sansilvestre/sansilvestre-inmuebles.png',
+      'assets/images/sansilvestre/sansilvestre-servicios.png',
+      'assets/images/sansilvestre/sansilvestre-detalle.png',
+      'assets/images/sansilvestre/sansilvestre-similares.png',
     ],
   },
   {
@@ -219,6 +242,7 @@ projects: Project[] = [
   openModal(project: Project): void {
     this.selectedProject = project;
     this.currentIndex = 0;
+    this.direction = 'next';
     if (isPlatformBrowser(this.platformId)) {
       document.body.style.overflow = 'hidden';
     }
@@ -233,6 +257,7 @@ projects: Project[] = [
 
   prev(): void {
     if (!this.selectedProject?.images?.length) return;
+    this.direction = 'prev';
     this.currentIndex =
       (this.currentIndex - 1 + this.selectedProject.images.length) %
       this.selectedProject.images.length;
@@ -240,11 +265,13 @@ projects: Project[] = [
 
   next(): void {
     if (!this.selectedProject?.images?.length) return;
+    this.direction = 'next';
     this.currentIndex =
       (this.currentIndex + 1) % this.selectedProject.images.length;
   }
 
   goTo(index: number): void {
+    this.direction = index < this.currentIndex ? 'prev' : 'next';
     this.currentIndex = index;
   }
 
